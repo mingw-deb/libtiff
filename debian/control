@@ -1,10 +1,13 @@
 Source: mingw-w64-libtiff
 Priority: optional
 Maintainer: Tobias Schlemmer <keinstein@users.berlios.de>
-Build-Depends: debhelper (>= 9), autotools-dev
-Standards-Version: 3.9.8
+Build-Depends: debhelper (>= 9), autotools-dev,
+	       gcc-mingw-w64, g++-mingw-w64 (>= 1.7.1),
+	       xz-mingw-w64-dev, libz-mingw-w64-dev,
+	       libjpeg-turbo-mingw-w64-dev
+Standards-Version: 4.1.1
 Section: libs
-Homepage: <insert the upstream URL, if relevant>
+Homepage: http://www.simplesystems.org/libtiff/
 #Vcs-Git: https://anonscm.debian.org/collab-maint/mingw-w64-libtiff.git
 #Vcs-Browser: https://anonscm.debian.org/cgit/collab-maint/mingw-w64-libtiff.git
 
@@ -12,11 +15,11 @@ Package: mingw-w64-libtiff-dev
 Section: libdevel
 Architecture: any
 Depends: mingw-w64-libtiffBROKEN (= ${binary:Version}), ${misc:Depends}
-Description: <insert up to 60 chars description>
- <insert long description, indented with spaces>
+Description: Library for manipulation of TIFF images (mingw-w64)
+ This Package contains the development files: headers and libraries.
 
-Package: mingw-w64-libtiffBROKEN
+Package: mingw-w64-libtiff1
 Architecture: any
 Depends: ${shlibs:Depends}, ${misc:Depends}
-Description: <insert up to 60 chars description>
- <insert long description, indented with spaces>
+Description: Library for manipulation of TIFF images (mingw-w64)
+ This Package contains the runtime DLLs.

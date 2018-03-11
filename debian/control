@@ -11,14 +11,15 @@ Homepage: http://www.simplesystems.org/libtiff/
 #Vcs-Git: https://anonscm.debian.org/collab-maint/mingw-w64-libtiff.git
 #Vcs-Browser: https://anonscm.debian.org/cgit/collab-maint/mingw-w64-libtiff.git
 
-Package: mingw-w64-libtiff-dev
+Package: libtiff-mingw-w64-dev
 Section: libdevel
 Architecture: any
-Depends: mingw-w64-libtiffBROKEN (= ${binary:Version}), ${misc:Depends}
+Depends: libtiff1-mingw-w64 (= ${binary:Version}), ${misc:Depends}
 Description: Library for manipulation of TIFF images (mingw-w64)
- This Package contains the development files: headers and libraries.
+ This Package contains the development files.
 
-Package: mingw-w64-libtiff1
+
+Package: libtiff1-mingw-w64
 Architecture: any
 Depends: ${shlibs:Depends}, ${misc:Depends}
 Description: Library for manipulation of TIFF images (mingw-w64)
